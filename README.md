@@ -11,7 +11,7 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
        最終僅使用7樣特徵及達到Top5%，你可以在這裏找到過程的詳細解說 : 
 * [Project-KKBOX churn prediction Top5% Based on GCP Environment](https://medium.com/@yulongtsai/kaggle-kkbox-churn-prediction-top5-c0ea4c9b3f1a)<br>
  **********************************************
-<b>以下會針對最重要的部分特徵工程及資料清理的部分說明<b>
+<b>以下會針對最重要的部分特徵工程及資料清理的部分說明</b>
  
 ### 資料清洗
 |Feature|解釋|資料表|動機|
@@ -35,7 +35,7 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 |情況|解釋|處理|
 |---|---|----|
 |is_cancel = 1|該交易為取消交易|修正到期日為交易日|
-|is_cancel = 0|該交易<b>非<b>取消交易|按照原始合約天數，實際所付價格，推斷到期日|
+|is_cancel = 0|該交易<b>非</b>取消交易|按照原始合約天數，實際所付價格，推斷到期日|
 
 ### 特徵工程 
 本次建模並沒有使用相當多的特徵，原本6張Tabel合併之後原始特徵就有20+項，然而大部分都沒有提供什麼訊息，
