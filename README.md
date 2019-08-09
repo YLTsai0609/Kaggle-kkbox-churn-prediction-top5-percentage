@@ -58,3 +58,6 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 ### 資料處理及效能比較
 * [Concatenation of Bigquery Table](https://github.com/YLTsai0609/Kaggle-kkbox-churn-prediction-top5-percentage/blob/master/BQ%20Tables%20concat.ipynb)
 * [Comparison Getting Dataframe Using bigquery and using bigquery and storage streaming](https://github.com/YLTsai0609/Kaggle-kkbox-churn-prediction-top5-percentage/blob/master/efficiency%20testing%20reading%20dataframe%20from%20bigquery.ipynb)
+
+### 模型解釋
+* [Lift Chart, Permutation Importance LIME](https://medium.com/@yulongtsai/lift-chart-permutation-importance-lime-c22be8bdaf48)
