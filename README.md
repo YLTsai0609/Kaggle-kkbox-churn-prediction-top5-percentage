@@ -12,9 +12,55 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 * [Project-KKBOX churn prediction Top5% Based on GCP Environment](https://medium.com/@yulongtsai/kaggle-kkbox-churn-prediction-top5-c0ea4c9b3f1a)<br>
  **********************************************
 <b>以下會針對最重要的部分特徵工程及資料清理的部分說明</b>
- 
+### 原始資料
+#### user_label
+
+|特徵|描述|
+|----|----|
+|msno|編碼後使用者id|
+|is_chrun|流失與否|
+
+#### user_logs
+* 共兩張 user_logs, user_logs_v2
+
+|特徵|描述|
+|----|----|
+|date|使用者聽歌日期(日)|
+|num_25|25%之內卡歌-歌曲數|
+|num_50|50%之內卡歌-歌曲數|
+|num_75|75%之內卡歌-歌曲數|
+|num_985|98.5%之內卡歌-歌曲數|
+|num_100|100%聽完-歌曲數|
+|num_unq|獨立歌曲數|
+|total_secs|總秒數|
+
+#### transactions
+* 共兩張 transactions, transactions_v2
+
+特徵|描述|
+|----|----|
+|payment_method_id|編碼後付費方式|
+|payment_plan_days|方案天數|
+|plan_list_price|方案價格|
+|actual_amount_paid|實付價格|
+|transaction_date|交易日期|
+|membership_expire_date|該交易知會員到齊日|
+|is_cancel|是否為取消交易|
+|is_auto_renew|是否為自動更新|
+
+#### members
+
+特徵|描述|
+|----|----|
+|city|註冊城市|
+|bd|註冊年齡|
+|gender|註冊性別|
+|registered_via|經由?裝置註冊(編碼後)|
+|registration_init_time|首次註冊日期|
+
+
 ### 資料清洗
-|Feature|解釋|資料表|動機|
+|特徵|解釋|資料表|動機|
 |-------|---|-----|----|
 |mem_expire_date|合約到期日|transactions|有許多不合理的合約到期日，例如1971年, 2020年|
 |bd|使用者註冊時年齡|members|年齡有低於0歲及超過100歲，我們過濾了0~95歲，其餘設為 -1，並且發現年齡不合理的紀錄有更低的流失率|
@@ -43,7 +89,7 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 我們可以取出相當細緻的使用者行為，除了按照使用者ID將所有交易總和，聽歌記錄總和，得知對kkbox的依賴度之外，
 我們亦可以透過時間窗口的大小(週，雙週，月，兩個月......)等來捕捉使用者行為，下表為特徵工程的構想動機，8項特徵之中就有6項與時間窗口有關 : 
 
-|Feature|解釋|資料表|動機|
+|特徵|解釋|資料表|動機|
 |-------|----|----|-----|
 |six_month_day_listen|過去六個月內的使用者聽歌次數|User_logs|使用者在特定時間區間內的行為|
 |six_month_user_latent_satisfaction|過去六個月內的聽歌滿意度|User_logs|使用者在特定時間區間內的行為|
