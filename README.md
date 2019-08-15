@@ -44,7 +44,7 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 |plan_list_price|方案價格|
 |actual_amount_paid|實付價格|
 |transaction_date|交易日期|
-|membership_expire_date|該交易知會員到齊日|
+|membership_expire_date|該交易之會員到齊日|
 |is_cancel|是否為取消交易|
 |is_auto_renew|是否為自動更新|
 
