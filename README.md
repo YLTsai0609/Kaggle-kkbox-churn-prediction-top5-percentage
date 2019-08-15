@@ -8,7 +8,7 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
 * [Initializing Projects of GCP and BigQuery Using Cloud Shell](https://medium.com/@yulongtsai/datalab-and-bigquery-to-analytics-d0802782d9bb) 
 * [Analyzing KKBOX User_logs Using BigQuery and Datalab ](https://medium.com/@yulongtsai/datalab-bigquery-python-kkbox-churn-prediction-f2a7245c5d99) <br>
        本次預測主要使用了RandomForest及XGBoost並搭配資料清理及特徵工程，
-       最終僅使用7樣特徵及達到Top5%，你可以在這裏找到過程的詳細解說 : 
+       最終僅使用8樣特徵及達到Top5%，你可以在這裏找到過程的詳細解說 : 
 * [Project-KKBOX churn prediction Top5% Based on GCP Environment](https://medium.com/@yulongtsai/kaggle-kkbox-churn-prediction-top5-c0ea4c9b3f1a)<br>
  **********************************************
 <b>以下會針對最重要的部分特徵工程及資料清理的部分說明</b>
