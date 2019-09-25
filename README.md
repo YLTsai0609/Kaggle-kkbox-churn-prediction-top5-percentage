@@ -10,8 +10,27 @@ E-mail : [yltsai0609@gmail.com](yltsai0609@gmail.com) <br>
        本次預測主要使用了RandomForest及XGBoost並搭配資料清理及特徵工程，
        最終僅使用8樣特徵及達到Top5%，你可以在這裏找到過程的詳細解說 : 
 * [Project-KKBOX churn prediction Top5% Based on GCP Environment](https://medium.com/@yulongtsai/kaggle-kkbox-churn-prediction-top5-c0ea4c9b3f1a)<br>
+* 本次分析logloss -> 0.11, Top5%-Lift 9.2
+* 你可以在這裡找到模型成效解釋[[模型解釋策略]Lift Chart, Permutation Importance, LIME](https://medium.com/@yulongtsai/lift-chart-permutation-importance-lime-c22be8bdaf48)
+
  **********************************************
-<b>以下會針對最重要的部分特徵工程及資料清理的部分說明</b>
+<b>以下會針對目標、指標、資料清理、特徵工程等部分進行說明</b>
+### 目標 
+
+* 預測下個月使用者是否會流失
+流失定義 : 方案到期之後沒有續約，且沒有在30天內進行續訂
+舉例 : 
+
+User A 在3月被標記為流失 --> User A 在 0104日會員到期，沒有進行續訂，且在0203之前沒有進行續約
+
+User B 在3月被標記為流失 --> User B 在 0131日會員到期，沒有進行續訂，且在0302之前沒有進行續約
+
+User C 在3月被標記為**留存** --> User C 在 0115日會員到期，沒有進行續訂，但在0212續訂了
+
+### 指標
+* logloss 
+* Top5-Lift [你可以在這裡閱讀Top5-Lift應用於本專案的結果](https://medium.com/@yulongtsai/lift-chart-permutation-importance-lime-c22be8bdaf48)
+
 ### 原始資料
 #### user_label
 
